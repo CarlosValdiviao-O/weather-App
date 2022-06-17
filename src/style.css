@@ -1,0 +1,127 @@
+:root {
+    --light-font: rgb(104, 104, 104);
+    --normal-font: #292929;
+    --dark-font: rgb(20, 20, 20);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-height: 100vh;
+    background-color: #38BDA9;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--dark-font);
+}
+
+input, button {
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    border:2px solid #63DAAB;
+}
+
+button {
+    padding: 4px 8px;
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+#days, #center, #right div {
+    display: flex;
+    position: relative;
+}
+
+#days {
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#weather {
+    font-size: 60px;
+}
+
+#center .icon img {
+    height: 150px;
+    width: 150px;
+}
+
+#right div {
+  align-items: center;  
+}
+
+#right div .info {
+    font-size: 36px; 
+}
+
+#right .info {
+    font-size: 30px;
+    color: var(--normal-font);
+}
+
+#right div:last-of-type {
+    margin-bottom: 20px;
+}
+
+#right>.info:last-of-type {
+    font-size: 24px;
+}
+
+.day, #current {
+    padding: 10px 20px;
+    position: relative;
+    background-color: #63DAAB;
+    border-radius: 20px;
+}
+
+.day div.container {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.day img {
+    transform: translateY(-10px);
+    height: 100px;
+    width: 100px;
+}
+
+#temp {
+    position: absolute;
+    bottom: 10%;
+    pointer-events: none;
+    font-size: 48px;
+    margin-left: 15px;
+}
+
+.temps {
+    text-align: center;
+}
+
+.weather, .day .temps {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.date {
+    color: var(--normal-font);
+}
+
+#error {
+    color: rgb(218, 19, 19);
+}
